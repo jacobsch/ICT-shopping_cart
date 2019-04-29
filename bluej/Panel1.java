@@ -70,7 +70,7 @@
             String[] comboxGenderItems = {"Male", "Female", "Vatougios"};
     
             //construct components
-            lblTitle = new JLabel ("Bank of Jah"); // Giving value to our labels
+            lblTitle = new JLabel ("Shopping Cart"); // Giving value to our labels
             lblName1 = new JLabel ("By Owen Holman"); // Giving value to our labels
             lblName2 = new JLabel ("and Jacob Schwartz"); // Giving value to our labels
             lblLine = new JLabel ("-------------------------------"); // Giving value to our labels

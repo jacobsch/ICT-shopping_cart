@@ -27,7 +27,7 @@ public class JahWindow extends JFrame {
 
                 this.setSize(750, 500); //setting the size of the window
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //quitting program on exit
-                this.setTitle("JahWindow"); //setting title of window
+                this.setTitle("Shopping Cart"); //setting title of window
 
                 container = new JPanel(); //init panels in the window
                 container.setLayout( new CardLayout()); //setting layout properties
