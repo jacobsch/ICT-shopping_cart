@@ -1,17 +1,17 @@
 #BlueJ package file
-dependency1.from=Panel2
-dependency1.to=Panel3
+dependency1.from=JahWindow
+dependency1.to=Panel1
 dependency1.type=UsesDependency
 dependency2.from=JahWindow
-dependency2.to=Panel1
+dependency2.to=Panel2
 dependency2.type=UsesDependency
-dependency3.from=JahWindow
-dependency3.to=Panel2
+dependency3.from=Panel2
+dependency3.to=Panel3
 dependency3.type=UsesDependency
-editor.fx.0.height=722
-editor.fx.0.width=800
-editor.fx.0.x=320
-editor.fx.0.y=60
+editor.fx.0.height=759
+editor.fx.0.width=917
+editor.fx.0.x=203
+editor.fx.0.y=23
 objectbench.height=101
 objectbench.width=461
 package.divider.horizontal=0.6
