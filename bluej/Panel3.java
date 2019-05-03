@@ -78,18 +78,6 @@ public class Panel3 extends JPanel {
         add (lblLine); //adding components to the window
         add (lblpg); //adding components to the window
 
-        try {
-
-            BufferedImage xPic = ImageIO.read(new File("src/xxxtentacion.jpg")); // init image to the panel
-            Image sclImg = xPic.getScaledInstance(250, 250, Image.SCALE_SMOOTH);
-            ImageIcon imgIcon = new ImageIcon(sclImg);
-            JLabel picLabel = new JLabel(imgIcon); // Giving value to the image
-            picLabel.setBounds(225, 100, 250, 250); // Giving boundaries to our image
-            add(picLabel); // adding image to the panel
-
-        } catch(Exception ex) {
-            JOptionPane.showMessageDialog(container, "Image Exception!");
-        }
         //Adding quit functionality and quit button to the program
         btnQuit = new JButton("Quit"); // Giving value to the button
         btnQuit.setBounds(300, 400, 135, 25); // Giving placement properties to the button
