@@ -5,31 +5,16 @@ import java.util.*;
 public class main {
  
     /**
-     * In this program you will replicate an online shopping
-     * cart. You will use the ArrayList class to hold the
-     * items in your shopping cart.
-     * You will use the CartItem class to represent items in
-     * your shopping cart.
-     * In this driver program you will do the following:
-     * Create the shopping cart object
-     * Offer a menu of options:
-     * 1 add an item to your cart
-     * 2 remove an item from your cart
-     * 3 view the items in your cart
-     * 4 end shopping and go to checkout
-     * 5 empty your cart
-     * 6 exit the program
-     * Use the Scanner class to collect input
+
      */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        ArrayList<CartItem> shoppingCart = new ArrayList<CartItem>();
+        ArrayList<String> shoppingCart = new ArrayList<String>();
         boolean stay = true;
         int choice = 0;
-        int input = 0;
+        String input;
         int index=0;
         int total = 0;
-        Integer item;
+        String item;
  
         while(stay)
         {
@@ -103,6 +88,7 @@ public class main {
                     break;
  
                 }
+            prompt.close();
             }
         }
     }
