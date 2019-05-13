@@ -15,6 +15,8 @@ public class main {
         int index=0;
         int total = 0;
         String item;
+        int size;
+        String lines = "|------------------------------------|";
 
         Random randomNumb = new Random();
 
@@ -26,14 +28,18 @@ public class main {
         while(stay)
         {
             Scanner scan = new Scanner(System.in);
-            System.out.println("\nJahCart Menu");
-            System.out.println("1 Add an item to your JahCart");
-            System.out.println("2 Remove an item from your JahCart");
-            System.out.println("3 View the items in your JahCart");
-            System.out.println("4 Exit and add up the total");
-            System.out.println("5 Empty your JahCart");
-            System.out.println("6 Exit");
-            System.out.println("Select a menu option");
+            System.out.println(lines);
+            System.out.println("|            JahCart menu            |");
+            System.out.print(lines)
+            System.out.println("|1 Add an item to your JahCart       |");
+            System.out.println("|2 Remove an item from your JahCart  |");
+            System.out.println("|3 View the items in your JahCart    |");
+            System.out.println("|4 View items, add Total and Checkout|");
+            System.out.println("|5 Empty your JahCart                |");
+            System.out.println("|6                Exit               |");
+            System.out.println(lines);
+            System.out.println("|         Select a menu option       |");
+            System.out.println(lines);
             choice = scan.nextInt();
             scan.close();
 
@@ -74,18 +80,22 @@ public class main {
                 case 3:
                     //view the items in your cart
                     System.out.print('\f');
-                    System.out.println(shoppingCart);
-                    System.out.println(finalPrice);
+                    size=shoppingCart.size();
+                    if (size == 0) {
+                        System.out.println("Your JahCart is Empty");
+                    } else {
+                        System.out.println("Your JahCart consists of:");
+                        System.out.println(shoppingCart);
+                        System.out.println("and costs a total of " + finalPrice);
+                    }
                     break;
                 case 4:
-                    System.out.print('\f');
                     //Exit and add up the total
-                    // for (int i = 0; i<shoppingCart.size(); i++)
-                    // {
-                    //     item = shoppingCart.get(i);
-                    //     total = total + item.intValue();
-                    // }
-                    // System.out.println("Total is "+ total);
+                    System.out.print('\f');
+                    System.out.println("Your JahCart consists of:");
+                    System.out.println(shoppingCart);
+                    System.out.println("and costs a total of " + finalPrice);
+                    System.out.println();
                     System.out.println("Goodbye");
                     stay = false;
                     break;
@@ -93,12 +103,14 @@ public class main {
                     //Empty the list
                     System.out.print('\f');
                     shoppingCart.clear();
+                    System.out.println("JahCart Emptied!");
                     stay = true;
                     break;
                 case 6:
                     //exit
-                    stay = false;
+                    System.out.print('\f');
                     System.out.println("Goodbye");
+                    stay = false;
                     break;
  
                 }
