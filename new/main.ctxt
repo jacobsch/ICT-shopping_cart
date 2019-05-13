@@ -2,5 +2,5 @@
 comment0.target=main
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment1.text=\n\ In\ this\ program\ you\ will\ replicate\ an\ online\ shopping\n\ cart.\ You\ will\ use\ the\ ArrayList\ class\ to\ hold\ the\n\ items\ in\ your\ shopping\ cart.\n\ You\ will\ use\ the\ CartItem\ class\ to\ represent\ items\ in\n\ your\ shopping\ cart.\n\ In\ this\ driver\ program\ you\ will\ do\ the\ following\:\n\ Create\ the\ shopping\ cart\ object\n\ Offer\ a\ menu\ of\ options\:\n\ 1\ add\ an\ item\ to\ your\ cart\n\ 2\ remove\ an\ item\ from\ your\ cart\n\ 3\ view\ the\ items\ in\ your\ cart\n\ 4\ end\ shopping\ and\ go\ to\ checkout\n\ 5\ empty\ your\ cart\n\ 6\ exit\ the\ program\n\ Use\ the\ Scanner\ class\ to\ collect\ input\n
+comment1.text=\n\n
 numComments=2

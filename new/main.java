@@ -15,7 +15,14 @@ public class main {
         int index=0;
         int total = 0;
         String item;
- 
+
+        Random randomNumb = new Random();
+
+        int price = randomNumb.nextInt(1000);
+        price = price += 1;
+        String stringPrice = Integer.toString(price);
+        String finalPrice = "$"+stringPrice+".99";
+
         while(stay)
         {
             Scanner scan = new Scanner(System.in);
@@ -41,6 +48,7 @@ public class main {
                 {
                 case 1:
                     //add an integer
+                    System.out.print('\f');
                     System.out.println("Enter an item:");
                     input = prompt.nextLine();
                     item = new String(input);
@@ -49,6 +57,7 @@ public class main {
                     break;
                 case 2:
                     //remove from the list
+                    System.out.print('\f');
                     System.out.println("Enter an item to remove:");
                     input = prompt.nextLine();
                     item = new String(input);
@@ -64,9 +73,12 @@ public class main {
                     break;
                 case 3:
                     //view the items in your cart
+                    System.out.print('\f');
                     System.out.println(shoppingCart);
+                    System.out.println(finalPrice);
                     break;
                 case 4:
+                    System.out.print('\f');
                     //Exit and add up the total
                     // for (int i = 0; i<shoppingCart.size(); i++)
                     // {
@@ -79,7 +91,9 @@ public class main {
                     break;
                 case 5:
                     //Empty the list
+                    System.out.print('\f');
                     shoppingCart.clear();
+                    stay = true;
                     break;
                 case 6:
                     //exit
