@@ -30,15 +30,15 @@ public class main {
             Scanner scan = new Scanner(System.in);
             System.out.println(lines);
             System.out.println("|            JahCart menu            |");
-            System.out.print(lines)
+            System.out.println(lines);
             System.out.println("|1 Add an item to your JahCart       |");
             System.out.println("|2 Remove an item from your JahCart  |");
             System.out.println("|3 View the items in your JahCart    |");
             System.out.println("|4 View items, add Total and Checkout|");
             System.out.println("|5 Empty your JahCart                |");
-            System.out.println("|6                Exit               |");
+            System.out.println("|6               Exit                |");
             System.out.println(lines);
-            System.out.println("|         Select a menu option       |");
+            System.out.println("|        Select a menu option        |");
             System.out.println(lines);
             choice = scan.nextInt();
             scan.close();
@@ -53,7 +53,7 @@ public class main {
                 switch (choice)
                 {
                 case 1:
-                    //add an integer
+                    // OPTION 1 - Add an Item
                     System.out.print('\f');
                     System.out.println("Enter an item:");
                     input = prompt.nextLine();
@@ -62,7 +62,7 @@ public class main {
                     //intList.add(input);
                     break;
                 case 2:
-                    //remove from the list
+                    //OPTION 2 - Remove an Item
                     System.out.print('\f');
                     System.out.println("Enter an item to remove:");
                     input = prompt.nextLine();
@@ -78,7 +78,7 @@ public class main {
                     }
                     break;
                 case 3:
-                    //view the items in your cart
+                    //OPTION 3 - View Items
                     System.out.print('\f');
                     size=shoppingCart.size();
                     if (size == 0) {
@@ -90,13 +90,13 @@ public class main {
                     }
                     break;
                 case 4:
-                    //Exit and add up the total
+                    //OPTION 4 - Checkout
                     System.out.print('\f');
                     System.out.println("Your JahCart consists of:");
                     System.out.println(shoppingCart);
                     System.out.println("and costs a total of " + finalPrice);
                     System.out.println();
-                    System.out.println("Goodbye");
+                    System.out.println("Have a nice day!");
                     stay = false;
                     break;
                 case 5:
@@ -107,7 +107,7 @@ public class main {
                     stay = true;
                     break;
                 case 6:
-                    //exit
+                    //Exit
                     System.out.print('\f');
                     System.out.println("Goodbye");
                     stay = false;
