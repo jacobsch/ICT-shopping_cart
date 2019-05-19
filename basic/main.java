@@ -5,9 +5,10 @@ import java.util.*;
 public class main {
  
     /**
-
+     * Jacob Schwartz and Owen Holman Semifinal Project for ICT12
      */
     public static void main(String[] args) {
+        // Initalize most datatypes
         ArrayList<String> shoppingCart = new ArrayList<String>();
         boolean stay = true;
         int choice = 0;
