@@ -1,3 +1,124 @@
+// Pin Validator Java Semi Final Project
+
+// Jah
+import java.awt.*; // Everything needed
+import javax.swing.*; // GUI
+import java.awt.event.*; // Making buttons and more work
+import java.awt.image.BufferedImage; // Allow images to work
+import javax.imageio.ImageIO; // Allow images to work
+import java.io.*; // Allow external sources
+import java.io.File; // Allow external files
+import javax.swing.JOptionPane; // Giving us more control with our Panels
+import java.io.FileInputStream; // Allow files to work in program
+import java.io.InputStream; // Allow files to work in program
+
+// Start of Panel3
+public class Panel3 extends JPanel {
+
+    private JPanel container; // Adding the container locally so it does not interfere with the other panel files
+    private Panel3 accepted; // Adding the container locally so it does not interfere with the other panel files
+    private JButton toLogin; // Adding the container locally so it does not interfere with the other panel files
+    private JButton btnQuit; // Adding the container locally so it does not interfere with the other panel files
+
+    JLabel lblTitle; // Init this label to the program
+    JLabel lblName1; // Init this label to the program
+    JLabel lblName2; // Init this label to the program
+    JLabel lblLine; // Init this label to the program
+    JLabel lblpg; // Init this label to the program
+	JComboBox comboxItems;
+	JLabel lblItems;
+	JButton btnAdd;
+	JButton btnRemove;
+
+    public Panel3(JPanel c) {
+
+        accepted = this; // from Panel2 (line 21)
+
+        container = c;
+        this.setLayout(null); // Setting the layout to null
+		ArrayList<String> itemList = new ArrayList<String>();
+		getItems(itemList);
+        initComponents(); // Running the method which is summoning our components to be rendered in the window
+
+        toLogin = new JButton("Logout"); // Adding a button
+        toLogin.setBounds (300, 365, 135, 25); // Adding boundaries to the button
+        this.add(toLogin); // Adding actions to the button
+        this.setBackground(Color.GREEN); // Changing background colour when button pressed
+        toLogin.addActionListener( new ActionListener() {
+            // action when btn clicked
+            public void actionPerformed(ActionEvent e) {
+                
+                c.remove(accepted);
+                revalidate();
+                repaint();
+                CardLayout cardLayout = (CardLayout) container.getLayout();
+                cardLayout.show(container, "Login");
+                
+            } // end of actionPerformed
+        }); // end of toLogin btn
+
+    } // End of Panel3
+
+    public void initComponents() {
+		
+        //construct components
+        lblTitle = new JLabel ("Shopping Cart"); // Giving value to our labels
+        lblName1 = new JLabel ("By Owen Holman"); // Giving value to our labels
+        lblName2 = new JLabel ("and Jacob Schwartz"); // Giving value to our labels
+        lblLine = new JLabel ("-------------------------------"); // Giving value to our labels
+        lblpg = new JLabel ("Account Page"); // Giving value to our labels
+		
+		// new items to be positioned:
+		comboxItems = new JComboBox(itemList);
+		
+        
+        //set component bounds (only needed by Absolute Positioning)
+        lblTitle.setBounds (330, 15, 80, 25); // Giving boundaries to our tags
+        lblName1.setBounds (315, 45, 120, 25); // Giving boundaries to our tags
+        lblName2.setBounds (307, 60, 125, 25); // Giving boundaries to our tags
+        lblLine.setBounds (300, 30, 125, 25); // Giving boundaries to our tags
+
+        //add components
+        add (lblTitle); //adding components to the window
+        add (lblName1); //adding components to the window
+        add (lblName2); //adding components to the window
+        add (lblLine); //adding components to the window
+        add (lblpg); //adding components to the window
+
+        //Adding quit functionality and quit button to the program
+        btnQuit = new JButton("Quit"); // Giving value to the button
+        btnQuit.setBounds(300, 400, 135, 25); // Giving placement properties to the button
+        add(btnQuit); // Adding the button to the window
+        btnQuit.addActionListener( new ActionListener() {
+            //Action that happens when you press quit (it quits)
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0); // Once clicked, program is quit
+            } // end of actionPerformed quit
+
+        }); // end of btnQuit
+    } // end of initComponents
+	
+	public void getItems(ArrayList<String> items) {
+		try {
+			JSONObject inputFile = (JSONObject) readJSON("products-list.json"); // init .json object of our file, basically bringing the file into our code
+			JsonObject jsonObject = (JsonObject)new JsonParser().parse(inputFile);
+			JsonArray groupedObject = jsonObject.getAsJsonArray("group");
+			int countItem=0;
+			for(int i=0;i < groupedObject.size();i++) {
+				JsonObject items = ((JsonObject)groupedObject.get(i)).getAsJsonObject("item");
+				countItem+=items.size();
+			}
+		} catch(Exception ex) {
+			System.out.println(ex);
+		}
+	}
+}
+
+// end of file
+
+
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.*;
