@@ -113,7 +113,11 @@ public class main {
                     System.out.println("Goodbye");
                     stay = false;
                     break;
- 
+                default:
+                    System.out.print('\f');
+                    System.out.println("Invalid number. Try again");
+                    stay = true;
+                    break;
                 }
             prompt.close();
             }
