@@ -41,6 +41,11 @@ public class main {
             System.out.println(lines);
             System.out.println("|        Select a menu option        |");
             System.out.println(lines);
+            //choice = scan.nextInt();
+            while(!scan.hasNextInt()) {
+                System.out.println("Please enter an integer from 1-6!");
+                scan.next();
+            }
             choice = scan.nextInt();
             scan.close();
 
