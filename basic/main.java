@@ -63,6 +63,14 @@ public class main {
                     System.out.print('\f');
                     System.out.println("Enter an item:");
                     input = prompt.nextLine();
+                    if (input.equals("cancel") || input.equals("exit")) {
+                        System.out.println("Cancelling Operation...");
+                    }
+                    if (input.equals("Vatougios") || input.equals("Mr. Vatougios")) {
+                        System.out.println("Sorry, John Vatougios cannot be purchased! He is too special! ¯\\_(ツ)_/¯");
+                        System.out.println("Try to enter something less valuable!");
+                        input = prompt.nextLine();
+                    }
                     item = new String(input);
                     shoppingCart.add(item);
                     //intList.add(input);
@@ -73,6 +81,9 @@ public class main {
                     System.out.println("Enter an item to remove:");
                     input = prompt.nextLine();
                     item = new String(input);
+                    if (input.equals("cancel") || input.equals("exit")) {
+                        System.out.println("Cancelling Operation...");
+                    }
                     if (shoppingCart.contains(item))
                     {
                         shoppingCart.remove(item);
@@ -94,13 +105,15 @@ public class main {
                         System.out.println(shoppingCart);
                         System.out.println("and costs a total of " + finalPrice);
                     }
+                    stay = true;
                     break;
                 case 4:
                     //OPTION 4 - Checkout
                     System.out.print('\f');
                     System.out.println("Your JahCart consists of:");
-                    System.out.println(shoppingCart);
-                    System.out.println("and costs a total of " + finalPrice);
+                    System.out.println(shoppingCart + " and costs a total of " + finalPrice);
+                    System.out.println("Enjoy express 2 day shipping to 1044 Edgewood Rd, North Vancouver, BC V7R 1Y7");
+                    System.out.println("brought to you by the Vatougios-Post!");
                     System.out.println();
                     System.out.println("Have a nice day!");
                     stay = false;
