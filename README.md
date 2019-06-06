@@ -10,4 +10,4 @@ Owen and Jacob took the same login template and swing panels from pin-validator 
 We used the template of our previous project, [pin-validator](https://github.com/jacobsch/ICT-pin_validator) as the login for our shopping cart and then we expanded further by adding new elements to the program
 
 ### Running the Program
-Use the basic folder for the barebones of the project
+Open the package.bluej file in BlueJ and compile and then run the main class
