@@ -1,27 +1,18 @@
 #BlueJ package file
-<<<<<<< HEAD
-editor.fx.0.height=0
-editor.fx.0.width=0
+editor.fx.0.height=900
+editor.fx.0.width=1440
 editor.fx.0.x=0
 editor.fx.0.y=0
 objectbench.height=80
-objectbench.width=409
-=======
-editor.fx.0.height=1000
-editor.fx.0.width=1296
-editor.fx.0.x=-8
-editor.fx.0.y=-8
-objectbench.height=131
-objectbench.width=673
->>>>>>> bb9d44e8d22c609c02b9dc03b07d3e4b9f5e86ee
-package.divider.horizontal=0.6002886002886003
-package.divider.vertical=0.6768149882903981
-package.editor.height=282
-package.editor.width=583
+objectbench.width=410
+package.divider.horizontal=0.600864553314121
+package.divider.vertical=0.8160676532769556
+package.editor.height=379
+package.editor.width=588
 package.editor.x=395
 package.editor.y=141
-package.frame.height=527
-package.frame.width=713
+package.frame.height=531
+package.frame.width=714
 package.numDependencies=0
 package.numTargets=1
 package.showExtends=true
@@ -33,10 +24,9 @@ readme.width=47
 readme.x=10
 readme.y=10
 target1.height=50
-target1.name=Panel3
+target1.name=main
 target1.showInterface=false
 target1.type=ClassTarget
-target1.typeParameters=
 target1.width=80
 target1.x=70
 target1.y=10
