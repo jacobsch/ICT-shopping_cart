@@ -1,4 +1,4 @@
-# shopping-cart
+# Shopping Cart
 
 Written and created entirely by Handsworth Students [Owen Holman](https://owenholman.com) and [Jacob Schwartz](https://jacob-schwartz.com)
 
