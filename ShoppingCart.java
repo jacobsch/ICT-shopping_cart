@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.*;
  
-public class main {
+public class ShoppingCart {
  
     /**
      * Jacob Schwartz and Owen Holman Semifinal Project for ICT12
