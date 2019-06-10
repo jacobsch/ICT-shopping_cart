@@ -11,7 +11,7 @@ Open the package.bluej file in BlueJ and compile and then run the main class
 
 ```
 |
-|--main.java
+|--ShoppingCart.java
 |--package.bluej
 |
 ```
